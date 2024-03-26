@@ -38,7 +38,7 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
         >
           <NavbarBrand>
             <img
-              src="../public/csaklogo.png"
+              src="/csaklogo.png"
               className="h-1/4 w-1/4 pb-4"
               alt=" Logo"
             />
@@ -52,7 +52,7 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
         >
           <NavbarBrand>
             <img
-              src="../public/csaklogo.png"
+              src="/csaklogo.png"
               className="h-1/4 w-1/4 pb-4"
               alt=" Logo"
             />

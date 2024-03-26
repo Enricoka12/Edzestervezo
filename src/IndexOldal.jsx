@@ -9,7 +9,7 @@ function IndexOldal(props) {
     <div>
 
     <div className="flex justify-center">
-      <img src="../public/logo.svg" className=" md:h-1/2 md:w-1/2 lg:min-h-52 lg:min-w-52 z-2" ></img>
+      <img src="/logo.svg" className=" md:h-1/2 md:w-1/2 lg:min-h-52 lg:min-w-52 z-2" ></img>
       </div>
     <div className="flex  lg:w-full  justify-center   ">
       
