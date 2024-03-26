@@ -27,7 +27,7 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
   ];
   return (
     <div className=" bg-black bg-transparent">
-      <Navbar disableAnimation isBordered className="bg-black text-white">
+      <Navbar   className="bg-black text-white">
         <NavbarContent className="sm:hidden bg-transparent" justify="start">
           <NavbarMenuToggle />
         </NavbarContent>
