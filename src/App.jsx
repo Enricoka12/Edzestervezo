@@ -18,7 +18,7 @@ export default function App() {
         <Ujnavbar kattintas={kattintas} bejelentkezve={bejelentkezve} />
       ) : null}
 
-      <div className="flex flex-grow justify-evenly pb-8 md:h-screen bg-[url('./public/hatter2.webp')] bg-cover ">
+      <div className="flex flex-grow justify-evenly pb-8 md:h-screen bg-[url('./public/hatter2.jpg')] bg-cover ">
         {bejelentkezve ? (
           <Edzesnapok className="h-screen" />
         ) : (
