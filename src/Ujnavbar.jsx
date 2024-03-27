@@ -18,13 +18,15 @@ import { GiNotebook } from "react-icons/gi";
 import { GiCardPickup } from "react-icons/gi";
 import { IoMdContacts } from "react-icons/io";
 
-function Ujnavbar({ bejelentkezve, kattintas }) {
+function Ujnavbar(props) {
   const menuItems = [
     { icon: <CgProfile />, label: "Profil" },
     { icon: <GiNotebook />, label: "Edzéstervem" },
     { icon: <GiCardPickup />, label: "Edzésterv választás" },
     { icon: <IoMdContacts />, label: "Kontakt" },
   ];
+
+  const bejelentkezveertek = props.bejelentkezve
   return (
     <div className=" bg-black bg-transparent">
       <Navbar   className="bg-black text-white">
@@ -58,7 +60,7 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
             />
             <p className="font-bold text-white">Edzésterv</p>
           </NavbarBrand>
-          {bejelentkezve && (
+          {bejelentkezveertek && (
             <>
               <NavbarItem isActive>
                 <Link
@@ -96,8 +98,8 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
         <NavbarContent className="ms-10">
           <NavbarItem className="hidden lg:flex"></NavbarItem>
           <NavbarItem>
-            {bejelentkezve && (
-              <Button className=" rounded-full ms-10" onClick={kattintas}>
+            {bejelentkezveertek && (
+              <Button className=" rounded-full ms-10" onClick={props.kijelentkezes}>
                 <LuLogOut />
               </Button>
             )}
@@ -108,12 +110,12 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
           {menuItems.map((item, index) => (
             <NavbarMenuItem key={`${item.label}-${index}`}>
               <div className="grid ">
-                <div className="grid grid-cols-2 items-center justify-center">
-                  <div className="justify-end grid pe-6 text-2xl">
+                <div className="flex  items-center justify-start align-middle">
+                  <div className="justify-end grid pe-6 text-4xl">
                     {item.icon}
                   </div>
                   <Link
-                    className="text-xl "
+                    className="text-4xl "
                     color={
                       index === 2
                         ? "warning"
@@ -126,10 +128,13 @@ function Ujnavbar({ bejelentkezve, kattintas }) {
                   >
                     {item.label}
                   </Link>
+                 
                 </div>
               </div>
             </NavbarMenuItem>
+            
           ))}
+           <img src="logo.svg"></img>
         </NavbarMenu>
       </Navbar>
     </div>

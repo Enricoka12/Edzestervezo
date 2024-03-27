@@ -40,7 +40,7 @@ function Navbar2(props) {
         <NavbarItem className="hidden lg:flex"></NavbarItem>
         <NavbarItem>
           {bejelentkezve ? (
-            <Button onClick={props.kattintas}>Kijelentkezés</Button>
+            <Button onClick={props.kijelentkezes}>Kijelentkezés</Button>
           ) : null}
         </NavbarItem>
       </NavbarContent>
